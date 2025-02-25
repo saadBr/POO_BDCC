@@ -73,4 +73,22 @@ public class PatientDao implements IPatientDao{
         }
         return p;
     }
+    @Override
+    public List<Patient> searchByQuery(String query) throws SQLException {
+        Connection connection = DBconnection.getConnection();
+        PreparedStatement pstm = connection.prepareStatement("SELECT * FROM PATIENTS WHERE NOM LIKE ? OR PRENOM LIKE ?");
+        pstm.setString(1,"%"+query+"%");
+        pstm.setString(2,"%"+query+"%");
+        ResultSet rs = pstm.executeQuery();
+        List<Patient> patients = new ArrayList<>();
+        while (rs.next()){
+            Patient p = new Patient();
+            p.setId_patient(rs.getInt("ID_PATIENT"));
+            p.setNom(rs.getString("NOM"));
+            p.setPrenom(rs.getString("PRENOM"));
+            p.setTel(rs.getString("TEL"));
+            patients.add(p);
+        }
+        return patients;
+    }
 }

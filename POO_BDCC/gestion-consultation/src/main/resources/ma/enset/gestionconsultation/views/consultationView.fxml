@@ -5,8 +5,9 @@
 <?import javafx.scene.layout.*?>
 
 
+<?import java.net.URL?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.enset.gestionconsultation.controllers.ConsultationController">
-   <top>
+    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <GridPane>
@@ -30,9 +31,10 @@
             </GridPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button fx:id="buttonAjouter" mnemonicParsing="false" text="Ajouter" onAction="#ajouterConsultation"/>
-                  <Button fx:id="buttonSupprimer" mnemonicParsing="false" text="Supprimer" />
-                  <Button fx:id="buttonModifier" mnemonicParsing="false" text="Modifier" />
+                  <Button  mnemonicParsing="false" text="Ajouter" onAction="#ajouterConsultation" styleClass="btn-success"/>
+                  <Button  mnemonicParsing="false" text="Supprimer" onAction="#supprimerConsultation" styleClass="btn-warning" />
+                  <Button  mnemonicParsing="false" text="Modifier" onAction="#modifierConsultation" styleClass="btn-danger"/>
+                   <Label fx:id="labelSuccess" textFill="white" styleClass="lbl-success" />
                </children>
             </HBox>
          </children>

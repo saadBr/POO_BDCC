@@ -31,16 +31,32 @@ public class PatientController implements Initializable {
     @FXML private TableColumn<Patient, String> columnTel;
     @FXML private Label labelSuccess;
     private ICabinetService cabinetService;
-    private ObservableList<Patient> patients = FXCollections.observableArrayList();
+    private ObservableList<Patient> patients;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-    cabinetService = new CabinetService(new PatientDao(),new ConsultationDao());
+    cabinetService = CabinetService.getInstance();
     columnId.setCellValueFactory(new PropertyValueFactory<>("id_patient"));
     columnNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
     columnPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
     columnTel.setCellValueFactory(new PropertyValueFactory<>("tel"));
+    patients = cabinetService.getPatients();
     tableViewPatients.setItems(patients);
     loadPatient();
+    textFieldSearch.textProperty().addListener((observable, oldValue, newValue) -> {
+        patients.setAll(cabinetService.searchByQuery(newValue));
+    });
+    tableViewPatients.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+        if (newValue != null) {
+            textFieldNom.setText(newValue.getNom());
+            textFieldPrenom.setText(newValue.getPrenom());
+            textFieldTel.setText(newValue.getTel());
+        }
+        else {
+            textFieldNom.clear();
+            textFieldPrenom.clear();
+            textFieldTel.clear();
+        }
+    });
     }
 
     public void ajouterPatient(){
@@ -77,6 +93,7 @@ public class PatientController implements Initializable {
     }
 
     public void loadPatient(){
-        patients.setAll(cabinetService.getAllPatient());
+        cabinetService.refreshPatients();
     }
+
 }

@@ -1,5 +1,6 @@
 package ma.enset.gestionconsultation.service;
 
+import javafx.collections.ObservableList;
 import ma.enset.gestionconsultation.entities.Consultation;
 import ma.enset.gestionconsultation.entities.Patient;
 
@@ -11,7 +12,9 @@ public interface ICabinetService {
     void modifierPatient(Patient patient);
     Patient getPatientById(int id);
     List<Patient> getAllPatient();
-
+    ObservableList<Patient> getPatients();
+    void refreshPatients();
+    List<Patient> searchByQuery(String query);
     void ajouterConsultation(Consultation consultation);
     void supprimerConsultation(Consultation consultation);
     void modifierConsultation(Consultation consultation);
