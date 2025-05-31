@@ -7,15 +7,12 @@ import java.util.List;
 public class ServerMultiThread {
     private static final int PORT = 9092;
     public static List<SocketThread> clients = new ArrayList<>();
-    private static int id = 1;
     public static void main(String[] args){
         try(ServerSocket serverSocket = new ServerSocket(PORT)){
             System.out.println("Server is running on port "+PORT);
             while (true){
                 Socket clientSocket = serverSocket.accept();
-                String clientName = "Client "+id++;
-                System.out.println(clientName+ " connected.");
-                SocketThread clientThread = new SocketThread(clientSocket,clients,clientName);
+                SocketThread clientThread = new SocketThread(clientSocket,clients,"");
                 clients.add(clientThread);
                 clientThread.start();
             }
@@ -24,4 +21,10 @@ public class ServerMultiThread {
         }
 
     }
+    public static void broadcastAll(String message) {
+        for (SocketThread client : clients) {
+            client.sendSystemMessage(message);
+        }
+    }
+
 }

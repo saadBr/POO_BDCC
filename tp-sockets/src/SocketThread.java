@@ -26,12 +26,14 @@ public class SocketThread extends Thread {
     }
     @Override
     public void run() {
+
         String message;
         try {
-            out.println(clientName);
+            clientName = in.readLine();
+            ServerMultiThread.broadcastAll("--- " + clientName + " has joined the chat ---");
             while ((message=in.readLine())!= null){
-                System.out.println(clientName+ ": "+message);
-                broadcast(clientName+": "+ message);
+                System.out.println(message);
+                broadcast(message);
             }
         }catch (IOException e){
             System.out.println(clientName+" disconnected");
@@ -39,9 +41,13 @@ public class SocketThread extends Thread {
             try {
                 clients.remove(this);
                 socket.close();
+                ServerMultiThread.broadcastAll("--- " + clientName + " has left the chat ---");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+    }
+    public void sendSystemMessage(String message) {
+        out.println("--- " + message);
     }
 }
