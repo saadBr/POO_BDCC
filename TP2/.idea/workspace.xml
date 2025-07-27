@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34b24100-304d-4146-8b62-08acbd47925b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exercice 2/Exercice 2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Exercice 2/Exercice 2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TP1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TP1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../TP1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.idea/libraries/openjfx_24_0_1_windows_x64_bin_sdk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/Application-Chat.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/src/Chat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/src/Chat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/src/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/src/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/src/ServerMultiThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp-sockets/src/SocketThread.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +36,18 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "saadBr"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;saadBr&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/saadBr/POO_TP2.git",
+    "url": "https://github.com/saadBr/POO_BDCC.git",
     "accountId": "30e5ae99-7c27-4e2f-b5dc-2a979e4d09a6"
   }
 }]]></component>
@@ -41,7 +55,7 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2qtgXO0HwXlllOUU2s1SanWMQFM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -55,7 +69,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/saade/TP2/Exercice 2",
+    "last_opened_file_path": "C:/Users/saade/POO_BDCC/TP2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,8 +105,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +121,7 @@
       <workItem from="1735487328430" duration="1232000" />
       <workItem from="1736024062585" duration="1154000" />
       <workItem from="1736026722325" duration="757000" />
+      <workItem from="1753625364657" duration="1104000" />
     </task>
     <servers />
   </component>
